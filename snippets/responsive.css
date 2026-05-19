@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, 1200px);
+  }
+}
