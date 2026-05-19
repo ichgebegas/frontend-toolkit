@@ -32,7 +32,7 @@ a {
   transition: color 180ms ease, opacity 180ms ease;
 }
 
-a:hover {
+a:not(.button):hover {
   color: var(--accent);
 }
 
@@ -61,8 +61,8 @@ img {
 .page-shell {
   min-height: 100vh;
   display: grid;
-  place-items: center;
-  padding: 56px 0;
+  align-items: center;
+  padding: clamp(40px, 8vw, 88px) 0;
 }
 
 .container {
@@ -125,14 +125,16 @@ h2 {
 .button:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
-  box-shadow: 0 14px 30px rgba(111, 95, 70, 0.22);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(111, 95, 70, 0.2);
   transform: translateY(-1px);
 }
 
 .button:active {
   background: var(--accent-active);
   border-color: var(--accent-active);
-  box-shadow: 0 8px 18px rgba(111, 95, 70, 0.18);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(111, 95, 70, 0.16);
   transform: translateY(0);
 }
 
@@ -147,7 +149,7 @@ h2 {
   background: var(--surface);
   color: var(--accent-hover);
   border-color: #cfc6b8;
-  box-shadow: 0 10px 24px rgba(24, 32, 29, 0.08);
+  box-shadow: 0 8px 18px rgba(24, 32, 29, 0.06);
 }
 
 .testimonials {
@@ -159,13 +161,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.panel:hover {
-  border-color: #d1d9d4;
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .grid {
@@ -175,7 +171,8 @@ h2 {
 
 @media (max-width: 760px) {
   .page-shell {
-    padding: 36px 0;
+    min-height: auto;
+    padding: 40px 0;
   }
 
   h1,
