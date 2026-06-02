@@ -24,27 +24,6 @@ The project is designed as a working catalog: find a useful interface, inspect i
 - `snippets/` - CSS helpers and background patterns;
 - `docs/` - checklists and component transfer notes.
 
-## Local development
-
-```bash
-cd showcase
-npm install
-npm run dev
-```
-
-Open [http://127.0.0.1:5173](http://127.0.0.1:5173).
-
-## Build
-
-```bash
-cd showcase
-npm run build
-```
-
-## Sources
-
-Some blocks and background patterns are adapted from open-source OpenSite components. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and license details.
-
 ## Contact
 
 Telegram: [@butterfly](https://t.me/butterfly)

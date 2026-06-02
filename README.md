@@ -24,27 +24,6 @@
 - `snippets/` - CSS-заготовки и фоновые паттерны;
 - `docs/` - чеклисты и заметки по переносу компонентов.
 
-## Локальный запуск
-
-```bash
-cd showcase
-npm install
-npm run dev
-```
-
-Открой [http://127.0.0.1:5173](http://127.0.0.1:5173).
-
-## Сборка
-
-```bash
-cd showcase
-npm run build
-```
-
-## Источники
-
-Часть блоков и фоновых решений адаптирована на основе открытых компонентов OpenSite. Подробности и лицензии указаны в [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
 ## Контакт
 
 Telegram: [@butterfly](https://t.me/butterfly)
