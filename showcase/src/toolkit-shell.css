@@ -290,12 +290,11 @@
   display: inline-grid;
   place-items: center;
   color: var(--muted-foreground);
-  transition: color 180ms ease, transform 180ms ease;
+  transition: color 180ms ease;
 }
 
 .toolkit-shell .telegram-link:hover {
   color: var(--foreground);
-  transform: translate(1px, -1px);
 }
 
 .toolkit-shell .telegram-icon {
