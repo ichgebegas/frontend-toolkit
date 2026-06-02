@@ -1,0 +1,4 @@
+.tagline .intro .button { margin-top:28px; }
+.tagline .post-card { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+.tagline .post-card .media { margin:0; border-radius:0; }
+.tagline .copy { padding:23px; }

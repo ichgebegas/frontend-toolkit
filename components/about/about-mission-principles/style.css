@@ -1,0 +1,20 @@
+*{box-sizing:border-box}:root{--ink:#171719;--muted:#737275;--border:#d6dee9;--accent:#555152;--soft:#eef0f4}
+body{margin:0;color:var(--ink);background:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.mission{position:relative;overflow:hidden;padding:clamp(68px,9vw,112px) 0}.container{position:relative;width:min(100% - 64px,1216px);margin:0 auto}
+.top{display:grid;grid-template-columns:.94fr 1fr;gap:clamp(52px,7vw,92px);align-items:center}
+.badge{display:inline-flex;margin-bottom:24px;padding:7px 14px;border-radius:999px;color:#fff;background:var(--accent);font-size:13px;font-weight:650}
+h1{margin:0 0 24px;font-size:clamp(2.55rem,4vw,3.2rem);line-height:1.1}
+.copy p{margin:0;color:var(--muted);font-size:19px;line-height:1.67}
+.primary,.vision a{display:inline-flex;align-items:center;gap:10px;margin-top:36px;padding:15px 22px;border-radius:7px;color:#fff;background:var(--accent);text-decoration:none;font-weight:650;transition:background-color 180ms ease,box-shadow 180ms ease}
+.primary svg,.vision a svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.primary:hover,.vision a:hover{background:#454143}
+.primary:active,.vision a:active{background:#363335}
+.primary:focus-visible,.vision a:focus-visible{outline:2px solid rgba(85,81,82,.25);outline-offset:2px}
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.principles article{position:relative;min-height:230px;padding:26px;border:1px solid var(--border);border-radius:9px;background:#fff}
+.principles b{position:absolute;right:21px;top:19px;color:#b4b9c1;font-size:30px}
+.principles h2{margin:4px 42px 15px 0;font-size:20px}
+.principles p{margin:0;color:var(--muted);font-size:15px;line-height:1.58}
+.vision{display:flex;align-items:center;justify-content:space-between;gap:42px;margin-top:70px;padding:38px 44px;border:1px solid var(--border);border-radius:12px;background:var(--soft)}
+.vision h2{margin:0 0 12px;font-size:26px}.vision p{max-width:750px;margin:0;color:var(--muted);line-height:1.6}.vision a{flex:0 0 auto;margin:0}
+@media(max-width:900px){.container{width:min(100% - 34px,700px)}.top{grid-template-columns:1fr}.vision{align-items:start;flex-direction:column}}@media(max-width:540px){.principles{grid-template-columns:1fr}}

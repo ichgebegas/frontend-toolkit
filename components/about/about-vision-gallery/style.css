@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+:root { --ink:#171819; --muted:#737275; --soft:#f2f0eb; --accent:#555152; --border:#d6dee9; }
+body { margin:0; color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+img { display:block; width:100%; object-fit:cover; }
+.vision { position:relative; min-height:100vh; padding:128px 0; overflow:hidden; }
+.vision__pattern { position:absolute; inset:0; background-image:linear-gradient(90deg,transparent 19px,rgba(85,81,82,.1) 19px 21px,transparent 21px),linear-gradient(transparent 19px,rgba(85,81,82,.1) 19px 21px,transparent 21px); background-size:30px 30px; }
+.vision__container { position:relative; width:min(100% - 64px,1216px); margin-inline:auto; }
+.vision__header { max-width:768px; margin:0 auto 72px; text-align:center; }
+.vision__header h1 { margin:0 0 26px; font-size:clamp(3rem,5.5vw,4.35rem); line-height:1.08; font-weight:620; }
+.vision__header p { margin:0; font-size:1.2rem; line-height:1.55; font-weight:520; }
+.vision__gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.vision__gallery img { height:320px; }
+.vision__columns { display:grid; grid-template-columns:1fr 1fr; gap:112px; padding:62px 0; }
+.vision__columns h2 { margin:0 0 20px; font-size:2.25rem; font-weight:620; }
+.vision__columns p { margin:0; color:var(--ink); font-size:1.08rem; line-height:1.75; font-weight:510; }
+.vision__cta { display:flex; align-items:center; justify-content:space-between; gap:32px; padding:52px 56px; border-radius:16px; background:var(--soft); }
+.vision__cta h2 { margin:0; font-size:2.05rem; line-height:1.22; font-weight:620; }
+.vision__cta a { display:inline-flex; align-items:center; min-height:48px; padding:0 28px; border-radius:999px; background:var(--accent); color:#fff; text-decoration:none; font-weight:650; transition:background-color 180ms ease; }
+.vision__cta a:hover { background:#454143; }
+.vision__cta a:active { background:#363335; }
+.vision__cta a:focus-visible { outline:2px solid rgba(85,81,82,.25); outline-offset:2px; }
+@media(max-width:760px) {
+  .vision { padding:64px 0; }
+  .vision__container { width:min(100% - 32px,1216px); }
+  .vision__header { margin-bottom:38px; }
+  .vision__header h1 { font-size:2.35rem; }
+  .vision__gallery,.vision__columns { grid-template-columns:1fr; gap:16px; }
+  .vision__gallery img { height:250px; }
+  .vision__columns { padding:38px 0; }
+  .vision__cta { flex-direction:column; align-items:flex-start; padding:30px 24px; }
+}

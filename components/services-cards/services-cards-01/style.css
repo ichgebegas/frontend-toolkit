@@ -10,6 +10,9 @@
   --accent-soft: #ebe4d8;
   --focus: rgba(111, 95, 70, 0.28);
   --radius: 8px;
+  --radius-card: var(--radius);
+  --radius-button: var(--radius);
+  --radius-input: var(--radius);
   --shadow: 0 16px 42px rgba(24, 32, 29, 0.07);
   --shadow-hover: 0 22px 56px rgba(24, 32, 29, 0.12);
 }
@@ -61,8 +64,8 @@ img {
 .page-shell {
   min-height: 100vh;
   display: grid;
-  align-items: center;
-  padding: clamp(40px, 8vw, 88px) 0;
+  align-items: start;
+  padding: clamp(56px, 10vh, 96px) 0 clamp(56px, 9vh, 88px);
 }
 
 .container {
@@ -113,7 +116,7 @@ h2 {
   min-height: 44px;
   padding: 0 18px;
   border: 1px solid var(--accent);
-  border-radius: var(--radius);
+  border-radius: var(--radius-button);
   background: var(--accent);
   color: #fff;
   font-weight: 700;
@@ -134,8 +137,8 @@ h2 {
   background: var(--accent-active);
   border-color: var(--accent-active);
   color: #fff;
-  box-shadow: 0 6px 14px rgba(111, 95, 70, 0.16);
-  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(111, 95, 70, 0.18);
+  transform: translateY(1px);
 }
 
 .button.secondary {
@@ -150,6 +153,14 @@ h2 {
   color: var(--accent-hover);
   border-color: #cfc6b8;
   box-shadow: 0 8px 18px rgba(24, 32, 29, 0.06);
+  transform: translateY(-1px);
+}
+
+.button.secondary:active {
+  color: var(--accent-active);
+  border-color: #c2b49f;
+  box-shadow: none;
+  transform: translateY(1px);
 }
 
 .services-cards {
@@ -159,7 +170,7 @@ h2 {
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   box-shadow: var(--shadow);
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
@@ -172,7 +183,7 @@ h2 {
 @media (max-width: 760px) {
   .page-shell {
     min-height: auto;
-    padding: 40px 0;
+    padding: 36px 0 44px;
   }
 
   h1,

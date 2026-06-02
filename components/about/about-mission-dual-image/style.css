@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+:root { --bg: #252627; --ink: #fff; --muted: #d6dee9; --line: rgba(214,222,233,.1); --accent: #b4b9c1; }
+body { margin: 0; color: var(--ink); background: var(--bg); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.mission { position: relative; min-height: 100vh; padding: clamp(76px,10vw,130px) 0; overflow: hidden; }
+.pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(65deg, transparent, transparent 92px, var(--line) 92px, var(--line) 94px); }
+.container { position: relative; display: grid; grid-template-columns: minmax(360px, .95fr) minmax(390px, 1fr); gap: clamp(52px,8vw,92px); align-items: center; width: min(100% - 64px,1216px); margin: 0 auto; }
+h1,h2 { margin: 0 0 18px; font-size: clamp(2.2rem,3.8vw,2.8rem); line-height: 1.14; }
+h2 { margin-top: 46px; }
+p { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 42px; }
+.actions a { display: inline-flex; min-height: 48px; align-items: center; padding: 0 23px; border-radius: 7px; color: #171719; background: #fff; font-weight: 650; text-decoration: none; transition: background-color 180ms ease, border-color 180ms ease; }
+.actions a:hover { background: #e7ebf0; }
+.actions a:active { background: #d6dee9; }
+.actions a:focus-visible { outline:2px solid rgba(214,222,233,.35); outline-offset:2px; }
+.actions .secondary { color: #fff; background: transparent; border: 1px solid rgba(214,222,233,.36); }
+.actions .secondary:hover { background:rgba(214,222,233,.12); border-color:rgba(214,222,233,.58); }
+.actions .secondary:active { background:rgba(214,222,233,.2); }
+.images { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.images img { display: block; width: 100%; height: min(545px,65vh); object-fit: cover; border-radius: 16px; box-shadow: 0 18px 42px rgba(0,0,0,.26); }
+.images img:last-child { margin-top: 52px; }
+@media (max-width: 900px) { .mission { min-height: auto; padding: 64px 0; } .container { grid-template-columns: 1fr; width: min(100% - 34px,720px); } .images img { height: auto; aspect-ratio: 3/4; } }

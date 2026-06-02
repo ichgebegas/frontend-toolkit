@@ -1,0 +1,16 @@
+.chapters-author .container { max-width:1216px; }
+header { max-width:none; margin:0 auto 54px; text-align:center; }
+header h1 { margin:0 0 15px; font-size:clamp(2.25rem,5vw,3.75rem); line-height:1.1; text-wrap:balance; }
+header p { margin:0; color:var(--muted); font-size:18px; }
+.layout { display:grid; }
+.sidebar { display:none; }
+.chapters .toc-link { display:flex; align-items:center; gap:11px; }
+.chapters span { display:grid; place-items:center; width:25px; height:25px; border-radius:50%; background:var(--soft); font-size:12px; }
+.author-card p { margin:16px 0 0; color:var(--muted); font-size:14px; line-height:1.55; }
+.hero-media { margin-bottom:35px; }
+.conclusion { margin-top:46px; padding:28px; border:1px solid var(--line); border-radius:9px; background:var(--soft); }
+.conclusion h2 { margin:0 0 8px; font-size:22px; }
+.conclusion p { margin:0 0 20px; color:var(--muted); }
+.conclusion div { display:flex; gap:10px; flex-wrap:wrap; }
+@media (min-width:1024px) { .layout { grid-template-columns:280px minmax(0,760px); gap:40px; align-items:start; } .sidebar { display:grid; position:sticky; top:32px; gap:17px; } }
+@media (max-width:860px) { header { margin-bottom:34px; text-align:center; } }

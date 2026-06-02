@@ -1,0 +1,7 @@
+.featured .feature { display:grid; gap:32px; margin-bottom:58px; }
+.featured .feature .media { margin:0; aspect-ratio:16/10; border-radius:12px; overflow:hidden; }
+.featured .feature img { width:100%; height:100%; object-fit:cover; }
+.featured .feature h2 { margin:16px 0 13px; font-size:clamp(1.8rem,3vw,2.35rem); line-height:1.14; }
+.featured .feature p { margin:0 0 21px; color:var(--muted); font-size:16px; line-height:1.6; }
+.featured .popular-heading { margin:0 0 26px; font-size:29px; }
+@media (min-width:820px) { .featured .feature { grid-template-columns:1.04fr .96fr; align-items:center; } }

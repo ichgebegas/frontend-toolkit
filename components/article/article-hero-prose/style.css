@@ -1,0 +1,19 @@
+.hero-prose { color:#fff; --ink:#fff; --muted:#b4b9c1; }
+.hero-prose .os-pattern { --os-pattern-muted-local:rgba(214,222,233,.35); }
+.hero-prose .container { max-width:920px; }
+header { display:grid; justify-items:center; gap:18px; margin:0 auto 34px; text-align:center; }
+h1 { max-width:780px; margin:0; font-size:clamp(2rem,4.2vw,3.25rem); line-height:1.08; text-wrap:balance; }
+header > p { max-width:650px; margin:0; color:var(--muted); font-size:18px; line-height:1.55; }
+.author strong { color:#fff; }
+.hero-media { margin-bottom:42px; }
+.prose { max-width:720px; margin-inline:auto; }
+.hero-prose .prose blockquote {
+  padding:0 0 0 18px;
+  border-left:3px solid rgba(214,222,233,.35);
+  background:transparent;
+  color:#fff;
+  font-style:italic;
+  font-weight:600;
+}
+.hero-prose .prose blockquote strong { display:block; margin-bottom:22px; }
+@media (max-width:600px) { header { justify-items:start; text-align:left; } .hero-media { margin-bottom:28px; } }

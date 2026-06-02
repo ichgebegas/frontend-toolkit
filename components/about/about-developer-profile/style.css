@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --surface: #f2f0eb;
+  --ink: #151719;
+  --muted: #737275;
+  --accent: #555152;
+  --accent-hover: #454143;
+  --line: #c7c7c5;
+  --night: #232625;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.developer-profile {
+  position: relative;
+  min-height: 100vh;
+  padding: 128px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--night);
+}
+
+.developer-profile__pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 31px, rgba(214, 222, 233, 0.14) 31px 32px),
+    repeating-linear-gradient(-45deg, transparent 0 31px, rgba(214, 222, 233, 0.14) 31px 32px);
+  opacity: 0.72;
+  mask-image: radial-gradient(circle at center, #000 22%, transparent 70%);
+}
+
+.profile-card {
+  position: relative;
+  width: min(100%, 768px);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: 0 24px 42px rgba(0, 0, 0, 0.22);
+}
+
+.profile-card__identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.profile-card__avatar {
+  width: 192px;
+  height: 192px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 14px 23px rgba(0, 0, 0, 0.12);
+}
+
+.profile-card__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding-top: 1px;
+}
+
+.profile-card h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.profile-card__role {
+  margin: 2px 0 16px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.profile-socials {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-socials a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  background: #fff;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.profile-socials a:hover {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.profile-socials svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.profile-socials__text {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.profile-card__bio {
+  max-width: 664px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.profile-card__skills h2 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-list span {
+  padding: 5px 18px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.profile-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.button {
+  min-height: 42px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button--primary {
+  color: #fff;
+  background: var(--accent);
+}
+
+.button--primary:hover {
+  background: var(--accent-hover);
+}
+
+.button--secondary {
+  border-color: var(--line);
+  background: #fff;
+}
+
+.button--secondary:hover {
+  border-color: var(--accent);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible,
+.profile-socials a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .developer-profile {
+    min-height: 100svh;
+    padding: 64px 24px;
+  }
+
+  .profile-card {
+    width: min(100%, 448px);
+    padding: 32px 24px;
+    align-items: center;
+  }
+
+  .profile-card__identity {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card__avatar {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .profile-card__heading {
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-card h1 {
+    font-size: 30px;
+  }
+
+  .profile-card__role {
+    font-size: 18px;
+  }
+
+  .profile-card__bio,
+  .profile-card__skills {
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+.sidebar-sticky .os-pattern { --os-pattern-muted-local:rgba(85,81,82,.12); }
+.layout { display:grid; justify-content:center; }
+.sidebar { display:none; }
+.back { display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:14px; }
+.back svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; }
+.reading h1 { margin:0 0 32px; font-size:clamp(2.35rem,4vw,3rem); line-height:1.12; text-wrap:balance; }
+.hero-media { margin-bottom:36px; }
+.mobile-author { display:flex; margin-bottom:24px; }
+@media (min-width:1024px) { .layout { grid-template-columns:250px minmax(0,760px); gap:48px; } .sidebar { position:sticky; top:42px; align-self:start; display:grid; gap:34px; } .mobile-author { display:none; } }
+@media (min-width:1280px) {
+  .social-share--floating {
+    display:flex;
+    position:fixed;
+    right:clamp(22px, 4vw, 44px);
+    top:50%;
+    flex-direction:column;
+    padding:10px 8px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:#fff;
+    transform:translateY(-50%);
+    box-shadow:0 6px 16px rgba(27,27,31,.06);
+  }
+  .social-share--floating button { width:36px; height:36px; border:0; }
+  .social-share--floating svg { width:18px; height:18px; }
+}

@@ -1,0 +1,7 @@
+.horizontal .cards { display:grid; gap:22px; }
+.horizontal-card { display:grid; gap:25px; padding:18px; border:1px solid var(--line); border-radius:9px; }
+.horizontal-card img { width:100%; height:100%; aspect-ratio:4/3; border-radius:8px; object-fit:cover; }
+.horizontal-card h2 { margin:12px 0 10px; font-size:23px; line-height:1.24; }
+.horizontal-card p { margin:0 0 15px; color:var(--muted); line-height:1.55; }
+.byline { color:var(--muted); font-size:14px; }
+@media (min-width:720px) { .horizontal-card { grid-template-columns:300px minmax(0,1fr); align-items:center; } }

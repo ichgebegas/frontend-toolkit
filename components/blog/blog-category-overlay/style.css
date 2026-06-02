@@ -1,0 +1,8 @@
+.overlay .intro { max-width: 768px; margin-bottom: 80px; }
+.overlay .post-card .media { margin-bottom: 0; }
+.overlay .media .badge { position:absolute; right:16px; top:16px; left: auto; margin:0; }
+.overlay .post-card h2 { margin: 0; padding: 20px 16px; }
+.overlay .card-foot { display:flex; justify-content:space-between; align-items:center; gap:12px; padding: 0 16px 18px; }
+.overlay .date { display:flex; align-items:center; gap:7px; color:var(--muted); font-size:14px; }
+.overlay .date svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; }
+.overlay .text-action svg { width: 12px; height: 12px; }

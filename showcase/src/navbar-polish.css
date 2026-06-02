@@ -1,0 +1,90 @@
+/* Navbar dropdowns are portalled outside their section, so keep their theme
+   explicit instead of relying on inherited preview colors. */
+body:has([id^="navbar-"]) [data-slot="navigation-menu-content"],
+body:has([id^="navbar-"]) [data-slot="navigation-menu-viewport"] {
+  --navbar-dropdown-bg: #ffffff;
+  --navbar-dropdown-fg: #555152;
+  --navbar-dropdown-muted: #737275;
+  background-color: var(--navbar-dropdown-bg);
+  color: var(--navbar-dropdown-fg);
+}
+
+body:has([id^="navbar-"]) [data-slot="navigation-menu-content"] .text-muted-foreground,
+body:has([id^="navbar-"]) [data-slot="navigation-menu-viewport"] .text-muted-foreground {
+  color: var(--navbar-dropdown-muted);
+}
+
+body:has([id="navbar-dark-icons"]) [data-slot="navigation-menu-content"],
+body:has([id="navbar-dark-icons"]) [data-slot="navigation-menu-viewport"] {
+  --navbar-dropdown-bg: #242325;
+  --navbar-dropdown-fg: #f3f4f6;
+  --navbar-dropdown-muted: #b4b9c1;
+  --background: 240 2% 14%;
+  --foreground: 216 31% 93%;
+  --muted: 240 2% 24%;
+  --muted-foreground: 216 8% 73%;
+  --popover: 240 2% 14%;
+  --popover-foreground: 216 31% 93%;
+  --border: 240 2% 30%;
+}
+
+body:has([id="navbar-dark-icons"]) [data-slot="navigation-menu-content"] a:hover,
+body:has([id="navbar-dark-icons"]) [data-slot="navigation-menu-viewport"] a:hover {
+  background-color: #343235;
+}
+
+body:has([id="navbar-enterprise-mega"]) [data-slot="navigation-menu-content"] a[class*="group"][class*="overflow-hidden"] {
+  background-color: #555152;
+  color: #ffffff;
+}
+
+body:has([id="navbar-enterprise-mega"]) [data-slot="navigation-menu-content"] a[class*="group"][class*="overflow-hidden"] p {
+  color: #f3f4f6;
+}
+
+body:has([id^="navbar-"]) [data-slot="navigation-menu-viewport"] {
+  transition:
+    width 280ms cubic-bezier(0.33, 1, 0.68, 1),
+    height 280ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+body:has([id="navbar-transparent-overlay"]) [id="navbar-transparent-overlay"] nav.bg-transparent [data-slot="navigation-menu-link"] {
+  color: rgb(255 255 255 / 0.9);
+}
+
+body:has([id="navbar-transparent-overlay"]) [id="navbar-transparent-overlay"] nav.bg-transparent [data-slot="navigation-menu-link"]:hover {
+  color: #ffffff;
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+body:has([id^="navbar-"]) [data-slot="navigation-menu-content"][data-motion^="from-"] {
+  animation: navbar-tab-enter 280ms cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+body:has([id^="navbar-"]) [data-slot="navigation-menu-content"][data-motion^="to-"] {
+  animation: navbar-tab-exit 220ms ease both;
+}
+
+@keyframes navbar-tab-enter {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-tab-exit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+}

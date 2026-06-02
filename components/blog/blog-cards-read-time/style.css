@@ -1,0 +1,8 @@
+.read-time .intro { max-width: 768px; gap: 16px; margin-bottom: 80px; }
+.read-time .eyebrow.outline { gap: 6px; color: var(--ink); border: 1px solid var(--line); background: transparent; }
+.read-time .file-icon { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.read-time .post-card { padding: 8px 12px 16px; border: 1px solid var(--line); border-radius: 12px; }
+.read-time .post-card .media { margin-bottom: 14px; border-radius: 8px; }
+.read-time .post-card p { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.read-time .read { margin-left:auto; padding:6px 10px; border-radius:999px; background:var(--soft); font-size:12px; font-weight:600; }
+.read-time .view-all { display: flex; justify-content: center; margin-top: 40px; }

@@ -1,0 +1,5 @@
+.nine .post-grid { row-gap:46px; }
+.nine .post-card .media { margin-bottom:18px; }
+.nine .post-card h2 { font-size:19px; }
+.nine .mobile-action { display:none; text-align:center; margin-top:38px; }
+@media (max-width:640px) { .nine .mobile-action { display:block; } }

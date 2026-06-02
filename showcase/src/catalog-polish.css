@@ -1,0 +1,18 @@
+/* Shared catalog-specific corrections live here so previews and full viewer
+   pages use the same visual rules. */
+body:has([id="link-tree-block"]) [id="link-tree-block"] a:hover,
+body:has([id="link-tree-block"]) [id="link-tree-block"] button:hover {
+  color: #ffffff;
+}
+
+body:has([id="link-tree-block"]) [id="link-tree-block"] a:hover *,
+body:has([id="link-tree-block"]) [id="link-tree-block"] button:hover * {
+  color: #ffffff;
+}
+
+img[alt="TechVenture Solutions Logo"] {
+  width: auto;
+  max-width: 10rem;
+  height: auto;
+  max-height: 3rem;
+}

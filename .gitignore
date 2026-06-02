@@ -1,4 +1,9 @@
 .superpowers/
 .playwright-mcp/
+node_modules/
+dist/
+.vite/
 .DS_Store
 Thumbs.db
+i.complete
+*.tsbuildinfo
