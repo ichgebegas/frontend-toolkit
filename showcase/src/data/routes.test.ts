@@ -35,4 +35,15 @@ describe("showcase routing", () => {
       id: "blog-grid-author-cards",
     });
   });
+
+  it("opens GitHub Pages hash routes from the project root", () => {
+    expect(parseShowcaseRoute("/frontend-toolkit/", "#/categories/about")).toEqual({
+      kind: "category",
+      slug: "about",
+    });
+    expect(parseShowcaseRoute("/frontend-toolkit/", "#/blocks/alternating-blocks")).toEqual({
+      kind: "block",
+      id: "alternating-blocks",
+    });
+  });
 });

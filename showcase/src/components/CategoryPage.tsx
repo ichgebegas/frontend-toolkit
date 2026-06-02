@@ -1,5 +1,5 @@
 import { getCategory } from "../data/catalog";
-import { appHref } from "../data/routes";
+import { appHref, routeHref } from "../data/routes";
 
 export function CategoryPage({ categorySlug }: { categorySlug: string }) {
   const category = getCategory(categorySlug);
@@ -24,7 +24,7 @@ export function CategoryPage({ categorySlug }: { categorySlug: string }) {
         </header>
         <section className="catalog-grid" aria-label={`${category.title} components`}>
           {category.blocks.map((block) => (
-            <a className="catalog-card" href={appHref(`blocks/${block.id}`)} key={block.id}>
+            <a className="catalog-card" href={routeHref(`blocks/${block.id}`)} key={block.id}>
               <span className="preview-frame">
                 <span className="preview-frame-inner">
                   <img

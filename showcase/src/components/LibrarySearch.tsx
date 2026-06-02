@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { categories, categoryHref } from "../data/catalog";
-import { appHref } from "../data/routes";
+import { routeHref } from "../data/routes";
 
 const maxResults = 8;
 
@@ -85,7 +85,7 @@ export function LibrarySearch() {
                 <section>
                   <p>Blocks</p>
                   {results.blocks.map((block) => (
-                    <a href={appHref(`blocks/${block.id}`)} key={block.id}>
+                    <a href={routeHref(`blocks/${block.id}`)} key={block.id}>
                       <span>{block.title}</span>
                       <small>{block.category}</small>
                     </a>

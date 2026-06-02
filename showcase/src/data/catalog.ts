@@ -13,7 +13,7 @@ import { linkPageBlocks } from "./link-page-blocks";
 import { navbarBlocks } from "./navbar-blocks";
 import { processBlocks } from "./process-blocks";
 import { statsBlocks } from "./stats-blocks";
-import { appHref } from "./routes";
+import { routeHref } from "./routes";
 
 export interface CatalogBlock {
   id: string;
@@ -80,5 +80,5 @@ export function findBlock(id: string): CatalogBlock | undefined {
 }
 
 export function categoryHref(slug: string): string {
-  return appHref(`categories/${slug}`);
+  return routeHref(`categories/${slug}`);
 }

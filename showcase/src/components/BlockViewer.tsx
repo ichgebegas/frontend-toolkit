@@ -1,7 +1,7 @@
 import { Monitor, Smartphone, Tablet } from "lucide-react";
 import { useState } from "react";
 import { findBlock } from "../data/catalog";
-import { appHref } from "../data/routes";
+import { appHref, routeHref } from "../data/routes";
 
 type Viewport = "desktop" | "tablet" | "mobile";
 
@@ -25,7 +25,7 @@ export function BlockViewer({ blockId }: { blockId: string }) {
         <nav className="breadcrumbs" aria-label="Breadcrumb">
           <a href={appHref()}>Home</a>
           <span aria-hidden="true">&rsaquo;</span>
-          <a href={appHref(`categories/${block.categorySlug}`)}>{block.category}</a>
+          <a href={routeHref(`categories/${block.categorySlug}`)}>{block.category}</a>
           <span aria-hidden="true">&rsaquo;</span>
           <strong>{block.title}</strong>
         </nav>
@@ -56,7 +56,7 @@ export function BlockViewer({ blockId }: { blockId: string }) {
             <div className="device-frame" data-mode={viewport}>
               <iframe
                 title={`Live preview of ${block.title}`}
-                src={appHref(`preview/${block.id}`)}
+                src={routeHref(`preview/${block.id}`)}
               />
             </div>
           </div>

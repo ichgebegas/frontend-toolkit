@@ -6,7 +6,7 @@ import { PreviewCanvas } from "./components/PreviewCanvas";
 import { parseShowcaseRoute } from "./data/routes";
 
 export function App() {
-  const route = parseShowcaseRoute(window.location.pathname);
+  const route = parseShowcaseRoute(window.location.pathname, window.location.hash);
 
   if (route.kind === "preview") {
     return <PreviewCanvas blockId={route.id} />;
